@@ -1,12 +1,8 @@
 package main
 
-import "flag"
-
-// scan given a path crawls it and its subfolders
-// searching for Git repositories
-func scan(path string) {
-	print("scan")
-}
+import (
+	"flag"
+)
 
 // stats generates a nice graph of your Git contributions
 func stats(email string) {
