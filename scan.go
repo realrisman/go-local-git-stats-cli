@@ -11,6 +11,18 @@ import (
 	"strings"
 )
 
+// expandHome replaces a leading ~ with the current user's home directory.
+func expandHome(path string) string {
+	if path == "~" || strings.HasPrefix(path, "~/") {
+		usr, err := user.Current()
+		if err != nil {
+			log.Fatal(err)
+		}
+		return usr.HomeDir + strings.TrimPrefix(path, "~")
+	}
+	return path
+}
+
 // getDotFilePath returns the dot file for the repos lists.
 // Creates it and the enclosing folder if it does not exists.
 func getDotFilePath() string {
@@ -93,6 +105,7 @@ func recursiveScanFolder(folder string) []string {
 // scan given a path crawls it and its subfolders
 // searching for Git repositories
 func scan(folder string) {
+	folder = expandHome(folder)
 	fmt.Printf("Found folders:\n\n")
 	repositories := recursiveScanFolder(folder)
 	filePath := getDotFilePath()
