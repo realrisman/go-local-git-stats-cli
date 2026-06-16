@@ -77,3 +77,7 @@ in your local Git config.
 
 - Only the **last ~6 months (183 days)** are graphed.
 - The tool reads local history only — nothing is sent anywhere.
+
+## License
+
+[MIT](LICENSE)
