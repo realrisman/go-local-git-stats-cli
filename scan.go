@@ -24,18 +24,9 @@ func getDotFilePath() string {
 
 // openFile open the file located at `filePath`. Creates it if not existing.
 func openFile(filePath string) *os.File {
-	f, err := os.OpenFile(filePath, os.O_APPEND|os.O_WRONLY, 0o755)
+	f, err := os.OpenFile(filePath, os.O_APPEND|os.O_CREATE|os.O_RDWR, 0o755)
 	if err != nil {
-		if os.IsNotExist(err) {
-			// file does not exist
-			_, err = os.Create(filePath)
-			if err != nil {
-				panic(err)
-			}
-		} else {
-			// other error
-			panic(err)
-		}
+		panic(err)
 	}
 	return f
 }
