@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/realrisman/go-local-git-stats-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/realrisman/go-local-git-stats-cli/actions/workflows/ci.yml)
 [![Go Version](https://img.shields.io/github/go-mod/go-version/realrisman/go-local-git-stats-cli)](go.mod)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A small command-line tool that renders a GitHub-style contribution graph for your
 **local** Git repositories, right in the terminal. It scans folders for repos, counts
