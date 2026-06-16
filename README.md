@@ -1,5 +1,7 @@
 # go-local-git-stats-cli
 
+[![CI](https://github.com/realrisman/go-local-git-stats-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/realrisman/go-local-git-stats-cli/actions/workflows/ci.yml)
+
 A small command-line tool that renders a GitHub-style contribution graph for your
 **local** Git repositories, right in the terminal. It scans folders for repos, counts
 the commits authored by a given email over the last six months, and prints them as a
