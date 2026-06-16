@@ -45,6 +45,12 @@ Point `-add` at a folder; the tool recursively finds every Git repository beneat
 go-local-git-stats-cli -add /Users/you/Codes
 ```
 
+Paths starting with `~` are expanded to your home directory, so quoting is safe:
+
+```sh
+go-local-git-stats-cli -add "~/Codes"
+```
+
 Run it for as many folders as you like — paths are de-duplicated, so re-adding is safe.
 
 ### 2. Show your contribution graph
