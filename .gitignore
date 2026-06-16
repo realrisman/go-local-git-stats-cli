@@ -10,6 +10,7 @@ go-local-git-stats-cli
 *.test
 *.out
 coverage.txt
+coverage.html
 
 # Go workspace and vendored deps
 /vendor/
