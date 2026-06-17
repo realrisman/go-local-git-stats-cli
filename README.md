@@ -4,7 +4,7 @@
 [![Go Version](https://img.shields.io/github/go-mod/go-version/realrisman/go-local-git-stats-cli)](go.mod)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![codecov](https://codecov.io/gh/realrisman/go-local-git-stats-cli/branch/main/graph/badge.svg)](https://codecov.io/gh/realrisman/go-local-git-stats-cli)
-[![min coverage](https://img.shields.io/badge/min%20coverage-80%25-orange)](#)
+[![coverage](https://img.shields.io/badge/coverage-83%25-brightgreen)](#)
 
 A small command-line tool that renders a GitHub-style contribution graph for your
 **local** Git repositories, right in the terminal. It scans folders for repos, counts
