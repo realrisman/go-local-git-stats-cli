@@ -19,14 +19,13 @@ type column []int
 
 // stats calculates and prints the stats
 func stats(email string) {
-	commits := processRepositories(email)
+	commits := processRepositories(email, getDotFilePath())
 	printCommitStats(commits)
 }
 
-// processRepositories given a user email, returns the
-// commits made in the last 6 months
-func processRepositories(email string) map[int]int {
-	filePath := getDotFilePath()
+// processRepositories given a user email and the path to the dot file listing
+// the repositories, returns the commits made in the last 6 months
+func processRepositories(email string, filePath string) map[int]int {
 	repos := parseFileLinesToSlice(filePath)
 	daysInMap := daysInLastSixMonths
 	commits := make(map[int]int, daysInMap)

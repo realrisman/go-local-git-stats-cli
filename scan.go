@@ -25,7 +25,8 @@ func expandHome(path string) string {
 
 // getDotFilePath returns the dot file for the repos lists.
 // Creates it and the enclosing folder if it does not exists.
-func getDotFilePath() string {
+// It is a variable so tests can point it at a temporary file.
+var getDotFilePath = func() string {
 	usr, err := user.Current()
 	if err != nil {
 		log.Fatal(err)
